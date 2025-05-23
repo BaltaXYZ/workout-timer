@@ -6,90 +6,59 @@
   <title>Intervall-tränings-timer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intervall-tränings-timer</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+
+<body>
+<h2 class="video-heading">Timer</h2>
+  <div id="app">
+    <div id="timer-display">
+      <div id="big-timer">00:00</div>
+      <div id="phase-label">—</div>
+    </div>
+    <div id="controls">
+      <label>Antal set: <input type="number" id="input-sets" value="3" min="1" /></label>
+      <label>Övningar per set: <input type="number" id="input-exercises" value="5" min="1" /></label>
+      <label>Sekunder arbete: <input type="number" id="input-work" value="45" min="1" /></label>
+      <label>Sekunder vila mellan övningar: <input type="number" id="input-rest-ex" value="15" min="0" /></label>
+      <label>Sekunder vila mellan set: <input type="number" id="input-rest-set" value="60" min="0" /></label>
+      <label>Välj ljud: 
+        <select id="sound-select">
+          <option value="beep1">Ljud 1</option>
+          <option value="beep2">Ljud 2</option>
+          <option value="beep3">Ljud 3</option>
+          <option value="beep4">Ljud 4</option>
+          <option value="beep5">Ljud 5</option>
+        </select>
+      </label>
+      <button id="preview-button">Lyssna på ljud</button>
+      <button id="start-button">Starta</button>
+      <button id="pause-button">Pausa</button>
+    </div>
+    <div id="summary">
+      <p>Återstående tid: <span id="remaining">00:00</span></p>
+    </div>
+    <audio id="beep1" src="sounds/beep1.mp3" preload="auto"></audio>
+    <audio id="beep2" src="sounds/beep2.mp3" preload="auto"></audio>
+    <audio id="beep3" src="sounds/beep3.mp3" preload="auto"></audio>
+    <audio id="beep4" src="sounds/beep4.mp3" preload="auto"></audio>
+    <audio id="beep5" src="sounds/beep5.mp3" preload="auto"></audio>
+  </div>
+ 
+<h2 class="video-heading">Träningsmusik</h2>
+<div id="music-player">
+  <audio id="training-audio" src="sounds/music.mp3"></audio>
+  <button id="play-music-button">Spela musik</button>
+</div>
+
+<h2 class="video-heading">Uppvärmning</h2>
 <div id="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Phorgm5pN3c" 
           title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
-
-<body>
-  <div id="app">
-    <div id="timer-display">
-      <div id="big-timer">00:00</div>
-      <div id="phase-label">—</div>
-    </div>
-    <div id="controls">
-      <label>Antal set: <input type="number" id="input-sets" value="3" min="1" /></label>
-      <label>Övningar per set: <input type="number" id="input-exercises" value="5" min="1" /></label>
-      <label>Sekunder arbete: <input type="number" id="input-work" value="45" min="1" /></label>
-      <label>Sekunder vila mellan övningar: <input type="number" id="input-rest-ex" value="15" min="0" /></label>
-      <label>Sekunder vila mellan set: <input type="number" id="input-rest-set" value="60" min="0" /></label>
-      <label>Välj ljud: 
-        <select id="sound-select">
-          <option value="beep1">Ljud 1</option>
-          <option value="beep2">Ljud 2</option>
-          <option value="beep3">Ljud 3</option>
-          <option value="beep4">Ljud 4</option>
-          <option value="beep5">Ljud 5</option>
-        </select>
-      </label>
-      <button id="preview-button">Lyssna på ljud</button>
-      <button id="start-button">Starta</button>
-      <button id="pause-button">Pausa</button>
-    </div>
-    <div id="summary">
-      <p>Återstående tid: <span id="remaining">00:00</span></p>
-    </div>
-    <audio id="beep1" src="sounds/beep1.mp3" preload="auto"></audio>
-    <audio id="beep2" src="sounds/beep2.mp3" preload="auto"></audio>
-    <audio id="beep3" src="sounds/beep3.mp3" preload="auto"></audio>
-    <audio id="beep4" src="sounds/beep4.mp3" preload="auto"></audio>
-    <audio id="beep5" src="sounds/beep5.mp3" preload="auto"></audio>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
-<body>
-  <div id="app">
-    <div id="timer-display">
-      <div id="big-timer">00:00</div>
-      <div id="phase-label">—</div>
-    </div>
-    <div id="controls">
-      <label>Antal set: <input type="number" id="input-sets" value="3" min="1" /></label>
-      <label>Övningar per set: <input type="number" id="input-exercises" value="5" min="1" /></label>
-      <label>Sekunder arbete: <input type="number" id="input-work" value="45" min="1" /></label>
-      <label>Sekunder vila mellan övningar: <input type="number" id="input-rest-ex" value="15" min="0" /></label>
-      <label>Sekunder vila mellan set: <input type="number" id="input-rest-set" value="60" min="0" /></label>
-      <label>Välj ljud: 
-        <select id="sound-select">
-          <option value="beep1">Ljud 1</option>
-          <option value="beep2">Ljud 2</option>
-          <option value="beep3">Ljud 3</option>
-          <option value="beep4">Ljud 4</option>
-          <option value="beep5">Ljud 5</option>
-        </select>
-      </label>
-      <button id="preview-button">Lyssna på ljud</button>
-      <button id="start-button">Starta</button>
-      <button id="pause-button">Pausa</button>
-    </div>
-    <div id="summary">
-      <p>Återstående tid: <span id="remaining">00:00</span></p>
-    </div>
-    <audio id="beep1" src="sounds/beep1.mp3" preload="auto"></audio>
-    <audio id="beep2" src="sounds/beep2.mp3" preload="auto"></audio>
-    <audio id="beep3" src="sounds/beep3.mp3" preload="auto"></audio>
-    <audio id="beep4" src="sounds/beep4.mp3" preload="auto"></audio>
-    <audio id="beep5" src="sounds/beep5.mp3" preload="auto"></audio>
-  </div>
-  <script src="script.js"></script>
+<h2 class="video-heading">Stretchning</h2>
+<div id="stretch-video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Qy3U09CnELI?start=19" 
+          title="Cool down stretch video" frameborder="0" allowfullscreen></iframe>
+</div>
+ <script src="script.js"></script>
 </body>
 </html>

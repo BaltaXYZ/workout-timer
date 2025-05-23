@@ -20,7 +20,7 @@
     const selected = getSelectedSound();
     selected.pause();
     selected.currentTime = 0;
-    selected.load();      // Force reload for consistent playback
+    selected.load();
     selected.play();
   }
 
@@ -67,7 +67,7 @@
       return;
     }
     phaseTimeLeft = phases[currentPhase].duration;
-    playPattern(3); // start pattern
+    playPattern(3);
     updateDisplay();
   }
 
@@ -77,11 +77,11 @@
       phaseTimeLeft--;
       const phase = phases[currentPhase];
       if (phase.state === 'work' && phaseTimeLeft === Math.ceil(phase.duration / 2)) {
-        playPattern(2); // mid-work pattern
+        playPattern(2);
       }
       updateDisplay();
     } else {
-      playPattern(3); // end pattern
+      playPattern(3);
       nextPhase();
     }
   }
@@ -110,4 +110,21 @@
   document.getElementById('preview-button').addEventListener('click', () => {
     playBeep();
   });
+
+  // Musikspelare
+  const playMusicButton = document.getElementById("play-music-button");
+  const trainingAudio = document.getElementById("training-audio");
+
+  playMusicButton.addEventListener("click", () => {
+    if (trainingAudio.paused) {
+      trainingAudio.play();
+      playMusicButton.textContent = "Pausa musik";
+    } else {
+      trainingAudio.pause();
+      playMusicButton.textContent = "Spela musik";
+    }
+  });
+
 })();
+
+

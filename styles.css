@@ -1,12 +1,9 @@
 body {
-  background: #1a1a1a;
+ background: #1a1a1a;
   color: #f0f0f0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 2rem 1rem;
 }
 
 #app {
@@ -15,6 +12,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   width: 350px;
+  margin: 0 auto; /* centrerar horisontellt */
 }
 
 #timer-display {
@@ -89,3 +87,47 @@ body {
   text-align: center;
   margin-top: 15px;
 }
+
+#video-container, #stretch-video-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#video-container iframe, #stretch-video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+
+.video-heading {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+#music-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  gap: 1rem;
+}
+
+#play-music-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background: #9b59b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#play-music-button:hover {
+  background: #8e44ad;
+}
+
