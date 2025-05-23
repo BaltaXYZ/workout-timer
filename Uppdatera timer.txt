@@ -1,0 +1,17 @@
+Steg för att uppdatera workout-timer på GitHub
+===============================================
+
+1. Öppna Kommandotolken och gå till din projektmapp:
+   cd "C:\Users\nek-ksu\Work Folders\Downloads\workout-timer-final\workout-timer-final"
+
+2. Lägg till alla ändrade och nya filer:
+   git add .
+
+3. Skapa en commit med ett meddelande (byt texten inom citationstecknen):
+   git commit -m "Beskrivning av vad du ändrat"
+
+4. Pusha ändringarna till GitHub:
+   git push
+
+Efter detta uppdateras din sida automatiskt på:
+https://baltaxyz.github.io/workout-timer/
