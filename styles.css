@@ -1,0 +1,91 @@
+body {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#app {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 350px;
+}
+
+#timer-display {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#big-timer {
+  font-size: 5em;
+  font-weight: bold;
+  color: #39ff14;
+}
+
+#phase-label {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+#controls label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#controls input, #controls select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 2px;
+  border: none;
+  border-radius: 5px;
+}
+
+#preview-button, #start-button, #pause-button {
+  width: 30%;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#preview-button {
+  background: #3498db;
+  color: #fff;
+}
+
+#preview-button:hover {
+  background: #2980b9;
+}
+
+#start-button {
+  background: #39ff14;
+  color: #1a1a1a;
+}
+
+#pause-button {
+  background: #e67e22;
+  color: #fff;
+}
+
+#start-button:hover {
+  background: #2ecc71;
+}
+
+#pause-button:hover {
+  background: #d35400;
+}
+
+#summary p {
+  text-align: center;
+  margin-top: 15px;
+}

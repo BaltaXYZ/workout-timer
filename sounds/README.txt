@@ -1,0 +1,1 @@
+Lägg till dina naturliga beep-ljud i denna mapp och döp dem till beep1.mp3 - beep5.mp3.
