@@ -114,6 +114,7 @@
   // Musikspelare
   const playMusicButton = document.getElementById("play-music-button");
   const trainingAudio = document.getElementById("training-audio");
+  const musicProgress = document.getElementById("music-progress");
 
   playMusicButton.addEventListener("click", () => {
     if (trainingAudio.paused) {
@@ -125,6 +126,15 @@
     }
   });
 
+  trainingAudio.addEventListener("timeupdate", () => {
+    if (!isNaN(trainingAudio.duration)) {
+      musicProgress.max = trainingAudio.duration;
+      musicProgress.value = trainingAudio.currentTime;
+    }
+  });
+
+  musicProgress.addEventListener("input", () => {
+    trainingAudio.currentTime = musicProgress.value;
+  });
+
 })();
-
-

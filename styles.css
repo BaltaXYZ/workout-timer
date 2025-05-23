@@ -127,6 +127,11 @@ body {
   cursor: pointer;
 }
 
+#music-progress {
+  width: 100%;
+  max-width: 400px;
+}
+
 #play-music-button:hover {
   background: #8e44ad;
 }
